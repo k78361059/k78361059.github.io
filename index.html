@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hervy Character Sheet</title>
+    <title>Hervy Character Sheet - Protected</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,18 +12,35 @@
             margin: 0;
             padding: 20px;
         }
-        .container {
+        .container, .login {
             max-width: 1000px;
-            margin: auto;
+            margin: 80px auto;
             background: #fff;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 0 15px rgba(200, 150, 100, 0.3);
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 70%;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            background: #cc6600;
+            border: none;
+            color: white;
+            font-size: 1em;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #aa5200;
         }
         h1 {
             color: #cc6600;
-            text-align: center;
-            font-size: 2.5em;
         }
         h2 {
             color: #b3541e;
@@ -31,6 +49,7 @@
         }
         .section {
             margin-bottom: 20px;
+            text-align: left;
         }
         .tag {
             display: inline-block;
@@ -56,36 +75,52 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+        #error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🐅 Futanari Breeding Character Sheet — Hervy</h1>
-	<img src="https://wimg.rule34.xxx//images/1152/ba10a4aa1df0d64b66e0bde832a19b259954b422.png" alt="Hervy Character Image" style="max-width:100%; border-radius: 10px;">
-        
-        <div class="section">
-            <h2>1. Character Name</h2>
-            <p>Hervy</p>
-        </div>
 
-        <div class="section">
-            <h2>2. Species/Type</h2>
-            <p>Amur Tiger — Anthro Futanari</p>
-        </div>
+<!-- Login Box -->
+<div id="loginBox" class="login">
+    <h1>🔒 Enter Password</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error">Incorrect password!</p>
+</div>
 
-        <div class="section">
-            <h2>3. Physical Description</h2>
-            <pre>Height: 7′6″ (230 cm)
+<!-- Protected Content -->
+<div id="protectedContent" class="container" style="display:none;">
+    <h1>🐅 Futanari Breeding Character Sheet — Hervy</h1>
+    <img src="https://wimg.rule34.xxx//images/1152/ba10a4aa1df0d64b66e0bde832a19b259954b422.png" alt="Hervy Character Image">
+
+    <div class="section">
+        <h2>1. Character Name</h2>
+        <p>Hervy</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Species/Type</h2>
+        <p>Amur Tiger — Anthro Futanari</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Physical Description</h2>
+        <pre>Height: 7′6″ (230 cm)
 Body Type: Tall, voluptuous, muscular yet soft
 Fur: Classic tiger stripes — warm orange, white underbelly, dark tail bands
 Hair: Long, brown, slightly wild
 Eyes: Green, almond-shaped
 Unique Traits: Large collar with bell, gold toe ring, strong predator build, expressive tail</pre>
-        </div>
+    </div>
 
-        <div class="section">
-            <h2>4. Sexual/Breeding Anatomy</h2>
-            <pre>Penis:
+    <div class="section">
+        <h2>4. Sexual/Breeding Anatomy</h2>
+        <pre>Penis:
   - Length: ~10.5 inches (unflared), grows larger when flared
   - Girth: Thick, shaped like a horse shaft with tiger-like markings
   - States: Sheathed / Unflared / Fully Flared
@@ -104,43 +139,57 @@ Cum Volume:
   - Scent: Potent, sweet — “100% organic”
 
 Heat/Cycle: Avoids heat due to extreme urge triggers.</pre>
-        </div>
+    </div>
 
-        <div class="section">
-            <h2>5. Breeding Traits</h2>
-            <pre>Fertility Level: High
+    <div class="section">
+        <h2>5. Breeding Traits</h2>
+        <pre>Fertility Level: High
 Impregnation Chance: Nearly guaranteed
 Litter Potential: 2–4 cubs or hybrids
 Uterus Capacity: Enhanced
 Egg-Laying: No
 Preferred Positions: Mating press, standing, riding</pre>
-        </div>
+    </div>
 
-        <div class="section">
-            <h2>6. Personality</h2>
-            <pre>Breeding Behavior: Switch — nurturing and dominant
+    <div class="section">
+        <h2>6. Personality</h2>
+        <pre>Breeding Behavior: Switch — nurturing and dominant
 Temperament: Kind, seductive, predator instincts
 Relationship Style: Intimate, possibly possessive with mates</pre>
-        </div>
-
-        <div class="section">
-            <h2>7. Background/Lore</h2>
-            <pre>Hervy is a seductive thief who uses her body, charm, and lingerie to steal or manipulate. She’s soft-spoken but cunning and aggressive when she needs to be, especially in intimate or protective situations.</pre>
-        </div>
-
-        <div class="section">
-            <h2>8. Tags</h2>
-            <span class="tag">#Futanari</span>
-            <span class="tag">#TigerGirl</span>
-            <span class="tag">#BreedingPredator</span>
-            <span class="tag">#HyperCum</span>
-            <span class="tag">#FlareTip</span>
-            <span class="tag">#BigBalls</span>
-            <span class="tag">#Anthro</span>
-            <span class="tag">#DomSwitch</span>
-            <span class="tag">#Fertile</span>
-            <span class="tag">#MommyEnergy</span>
-        </div>
     </div>
+
+    <div class="section">
+        <h2>7. Background/Lore</h2>
+        <pre>Hervy is a seductive thief who uses her body, charm, and lingerie to steal or manipulate. She’s soft-spoken but cunning and aggressive when she needs to be, especially in intimate or protective situations.</pre>
+    </div>
+
+    <div class="section">
+        <h2>8. Tags</h2>
+        <span class="tag">#Futanari</span>
+        <span class="tag">#TigerGirl</span>
+        <span class="tag">#BreedingPredator</span>
+        <span class="tag">#HyperCum</span>
+        <span class="tag">#FlareTip</span>
+        <span class="tag">#BigBalls</span>
+        <span class="tag">#Anthro</span>
+        <span class="tag">#DomSwitch</span>
+        <span class="tag">#Fertile</span>
+        <span class="tag">#MommyEnergy</span>
+    </div>
+</div>
+
+<script>
+function checkPassword() {
+    const input = document.getElementById("password").value;
+    const error = document.getElementById("error");
+    if (input === "tigress") {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("protectedContent").style.display = "block";
+    } else {
+        error.style.display = "block";
+    }
+}
+</script>
+
 </body>
 </html>
