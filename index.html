@@ -3,22 +3,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hervy Character Sheet - Protected</title>
+    <title>Furry Character Sheets - Login</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #fff8f0;
-            color: #4b2e2e;
+            background: #ffe6f0;
+            color: #5c2c44;
             margin: 0;
             padding: 20px;
         }
-        .container, .login {
+        .login, .container, .character, .home {
             max-width: 1000px;
             margin: 80px auto;
-            background: #fff;
+            background: #fff0fa;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(200, 150, 100, 0.3);
+            border-radius: 14px;
+            box-shadow: 0 0 20px rgba(255, 100, 180, 0.3);
             text-align: center;
         }
         input[type="password"] {
@@ -28,24 +28,19 @@
         }
         button {
             padding: 10px 20px;
-            background: #cc6600;
+            background: #ff66aa;
             border: none;
             color: white;
             font-size: 1em;
-            margin-top: 10px;
-            border-radius: 8px;
+            margin: 10px;
+            border-radius: 10px;
             cursor: pointer;
         }
         button:hover {
-            background: #aa5200;
+            background: #e05599;
         }
-        h1 {
-            color: #cc6600;
-        }
-        h2 {
-            color: #b3541e;
-            border-bottom: 2px solid #f0d5b4;
-            padding-bottom: 5px;
+        h1, h2 {
+            color: #d14b89;
         }
         .section {
             margin-bottom: 20px;
@@ -53,8 +48,8 @@
         }
         .tag {
             display: inline-block;
-            background: #f7d9b6;
-            color: #402000;
+            background: #ffcce5;
+            color: #661133;
             padding: 5px 10px;
             margin: 3px;
             border-radius: 8px;
@@ -62,22 +57,23 @@
         }
         img {
             max-width: 100%;
-            border-radius: 10px;
+            border-radius: 12px;
             margin: 20px 0;
             box-shadow: 0 0 8px rgba(0,0,0,0.1);
         }
         pre {
-            background: #fff3e0;
+            background: #ffeaf4;
             padding: 12px;
-            border-left: 4px solid #cc6600;
-            border-radius: 8px;
-            overflow-x: auto;
+            border-left: 4px solid #ff66aa;
+            border-radius: 10px;
             white-space: pre-wrap;
-            word-wrap: break-word;
         }
         #error {
             color: red;
             margin-top: 10px;
+            display: none;
+        }
+        .character {
             display: none;
         }
     </style>
@@ -93,8 +89,15 @@
     <p id="error">Incorrect password!</p>
 </div>
 
-<!-- Protected Content -->
-<div id="protectedContent" class="container" style="display:none;">
+<!-- Home Page -->
+<div id="homePage" class="home" style="display:none;">
+    <h1>💖 Choose a Character</h1>
+    <button onclick="showCharacter('hervy')">🐅 Hervy</button>
+    <button onclick="alert('More characters coming soon!')">🐺 (Coming Soon)</button>
+</div>
+
+<!-- Hervy Character Page -->
+<div id="hervy" class="character">
     <h1>🐅 Futanari Breeding Character Sheet — Hervy</h1>
     <img src="https://wimg.rule34.xxx//images/1152/ba10a4aa1df0d64b66e0bde832a19b259954b422.png" alt="Hervy Character Image">
 
@@ -176,6 +179,8 @@ Relationship Style: Intimate, possibly possessive with mates</pre>
         <span class="tag">#Fertile</span>
         <span class="tag">#MommyEnergy</span>
     </div>
+
+    <button onclick="goHome()">🏠 Back to Home</button>
 </div>
 
 <script>
@@ -184,10 +189,20 @@ function checkPassword() {
     const error = document.getElementById("error");
     if (input === "tigress") {
         document.getElementById("loginBox").style.display = "none";
-        document.getElementById("protectedContent").style.display = "block";
+        document.getElementById("homePage").style.display = "block";
     } else {
         error.style.display = "block";
     }
+}
+
+function showCharacter(name) {
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById(name).style.display = "block";
+}
+
+function goHome() {
+    document.querySelectorAll(".character").forEach(div => div.style.display = "none");
+    document.getElementById("homePage").style.display = "block";
 }
 </script>
 
